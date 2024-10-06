@@ -11,41 +11,38 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- /BS link -->
 
-    <!-- JS link-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- /JS link-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Font Awesome -->
 </head>
 
 <body>
     <header>
         <!-- Interactive Navbar -->
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid ps-0">
-                <nav class="navbar bg-dark">
-                    <div class="container">
-                        <a class="navbar-brand me-0" href="#">
-                            <img src="./img/duck.png" alt="Duck Logo" width="50" height="50">
-                        </a>
-                    </div>
-                </nav>
-                <button class="navbar-toggler bg-light border-dark-subtle" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/duck.png" alt="Logo" width="50" height="50" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active text-white ps-3" aria-current="page" href="#">Catalogo Libri</a>
+                            <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50 ps-3" href="#">Anagrafica Studenti</a>
+                            <a class="nav-link" href="#">Anagrafica utenti</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50 ps-3" href="#">Storico Prestiti</a>
+                            <a class="nav-link" href="#">Storico prestiti</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50 ps-3" href="#">Help</a>
+                            <a class="nav-link" href="#">Help</a>
                         </li>
                     </ul>
                 </div>
@@ -57,20 +54,20 @@
     <main>
         <!-- Title and Button -->
         <div class="container-md d-flex justify-content-between mt-4 px-2 mx-auto">
-            <div class="fs-3 fw-light">Catalogo Libri</div>
+            <h1 class="fs-3 fw-light">Catalogo Libri</h1>
             <button class="bg-primary text-white border-0 rounded px-3">Aggiungi Libro</button>
         </div>
         <!-- /Title and Button -->
 
         <!-- Books Table -->
         <div class="container-md mt-4 px-2 mx-auto">
-            <table class="table table-striped">
+            <table class="table table-striped align-middle">
                 <thead>
                     <tr>
-                        <th scope="col" class="col-6">Titolo</th>
-                        <th scope="col" class="col-3 d-none d-md-table-cell">Data prestito</th>
-                        <th scope="col" class="col-3">Stato</th>
-                        <th scope="col" class="col-3">Azioni</th>
+                        <th scope="col" class="w-50">Titolo</th>
+                        <th scope="col" class="d-none d-md-table-cell">Data prestito</th>
+                        <th scope="col">Stato</th>
+                        <th scope="col">Azioni</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,19 +77,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -102,19 +91,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -124,19 +105,11 @@
                         <td><span class="badge text-bg-warning text-white">In prestito</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -146,19 +119,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -168,19 +133,11 @@
                         <td><span class="badge text-bg-danger text-white">Non disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -190,19 +147,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -212,19 +161,11 @@
                         <td><span class="badge text-bg-warning text-white">In prestito</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -234,19 +175,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -256,19 +189,11 @@
                         <td><span class="badge text-bg-danger text-white">Non disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -278,19 +203,11 @@
                         <td><span class="badge text-bg-warning text-white">In prestito</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -300,19 +217,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -322,19 +231,11 @@
                         <td><span class="badge text-bg-success">Disponibile</span></td>
                         <td>
                             <div class="d-flex column-gap-1"><button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button type="button"
-                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                                        class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                                    </svg></button>
+                                    class="btn btn-outline-secondary btn-sm rounded-1 border-1 py-0 px-1"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </div>
                         <td>
                     </tr>
@@ -343,6 +244,10 @@
         </div>
         <!-- /Books Table -->
     </main>
+
+    <!-- JS link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- /JS link-->
 </body>
 
 </html>
